@@ -137,7 +137,7 @@ let edad_dos;
 console.log(edad_dos);
 
 // El operador typeof
-console.log(typeof undefined);//undefined
+/*console.log(typeof undefined);//undefined
 console.log(typeof 0);//number
 console.log(typeof true);//boolean
 console.log(typeof 10n);//bigint
@@ -145,7 +145,82 @@ console.log(typeof "hola");//string
 
 console.log(typeof(alert));//function
 console.log(typeof(null));// object -ERROR DE JS
-console.log(typeof(Math)); //object
+console.log(typeof(Math)); //object*/
+
+
+
+//interacciones : alert, prompt, confirm
+
+//let nombre_prompt = prompt('Digite el nombre', 'hola');
+//alert(nombre_prompt);
+
+//prompt('Digite el nombre');
+//prompt('Digite el nombre', '')//solo para IE
+
+//confirm
+
+//let esHelado = confirm('¿te gusta el helado?');
+//console.log(esHelado); //true si presionan ok y false si precionan cancelar
+
+
+//conversion de tipos
+//existen dos tipos de conversiones, explicita e implicita
+
+//convertir a string
+
+let valor = true; 
+console.log(typeof valor);
+
+valor = String(valor);// "true"
+valor = String(false);//false
+valor = String(null);//null
+valor = String(undefined);//undefined
+console.log(valor);
+console.log(typeof valor);
+
+//convertir a numero
+// conversiones nuemerias ocurren automaticamemette en funciones matematicas y expresiones
+
+//alert('6' / '2'); //3
+
+let cadena = "123";
+let num_cad = Number(cadena); //123
+
+console.log(Number('hola'));
+
+/* undefined -> NaN
+null -> 0
+true -> 1
+false ->0
+string '' -> 0
+string 'hola'-> NaN
+*/
+
+// convertir  a booleano
+ console.log(Boolean("hola"));
+
+/* undefined -> false
+null -> false
+string " " -> false
+NaN -> false
+0 -> false
+'0' -> true
+'  ' -> true */
+
+console.log(Boolean(String(0)));
+console.log(Boolean(0));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
