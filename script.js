@@ -296,16 +296,210 @@ a = 2;
 a --;
 console.log(a); //1
 
+// posicion del incremento o decremento
+
+a = 1;
+b  = ++ a;
+console.log(b); //2
+
+a = 1;
+b = a ++;
+c = a;
+console.log(b); //1
+console.log(c); //2
 
 
+//comparaciones
+console.log(2 > 1);
+console.log(2 == 1);
+console.log(2 != 1);
+
+let resultado = 2 >1
+
+//comparaciones entre cadenas
+
+console.log('Z' > 'A'); //true
+console.log('Show' > 'show'); //flase
+console.log('casa' > 'casas'); //false
+console.log('a' > 'A');
+console.log('carro' > 'cerro');
+
+//1. la letra minuscula es mayor que la mayuscula
+//2. la palabra con mas letras desppues de pasar la primera condicion es mayor que la de menos letras
+
+//comparacion de diferentes tipos
+//al comprar valores de diferentes tipos , JS convierte los valores a numeros
+// el undefined y el null en las comparaciones de igualacion no estrictas
+//actuan dferentes, 
+
+a= 0,
+b ='0';
+boleano_a =Boolean(a);//false
+boleano_b =Boolean(b);//true
+
+console.log(a == b);//true
+console.log('************');
+console.log('2' > 1);//true
+console.log('01'== 1);//true
+console.log(true > 0);//true
+console.log(false == 0);//true
+
+console.log('******nan******');
+//NaN
+console.log('hola'>0);//false
+console.log('hola'<0);//false
+console.log('hola'==0);//false
+console.log('*****undefined*******');
+
+//undefined
+console.log(undefined > 0);//false
+console.log(undefined < 0);//false
+console.log(undefined == 0);//false
+console.log('******null******');
 
 
+// null
 
+console.log(null > 0);//false
+console.log(null < 0);//false
+console.log(null == 0);//false
+console.log(null >= 0);//true
 
+console.log('*******null y undefined*****');
+//el undefined y el null en las comparaciones de igualacion no estrictas
+//actuan diferentes: son iguales entre si, pero no a ningun otro valor
 
+console.log(null == undefined); //true
+console.log(null == 5);//false
+console.log(undefined ==5);//false
 
+console.log('*******no diferencias de 0 de falso*****');
+console.log(0 == false);//true
+console.log(''== false); //true
 
+//igualacion estricta
+console.log(0 === false);//false
+console.log(  null === undefined);//false
+console.log(null == undefined);//true
 
+// sentencia if
+console.log('*******if*****');
+if(4 > 5) console.log('mensaje');
+
+if(4 > 5){
+    b = 5 + 3;
+    console.log('mensaje');
+}
+
+if('45a'/3){
+    console.log('no entro');
+}
+if('0'){
+    console.log('entro');
+}
+
+if(4/2){
+    console.log('entro');
+}
+
+if(1){
+    console.log('entro o no entro?');
+}
+
+let edadx;
+
+if(edadx){
+    console.log('variable definida');
+}else{
+    console.log('variable indefinida')
+}
+
+//haga un algortimo que dado una edad imprima true si es mayor de edad
+//false si no lo es
+
+let edad_usuario = 17;
+if(edad_usuario >=18){
+    console.log(true);
+}else{
+    console.log(false)
+}
+
+console.log(edad_usuario>=18);
+
+//operador ternario
+//condicion ?operacion verdadera : operacion falsa
+resultado = edad_usuario >=18 ? x =5 : x=7;
+
+//operador logico
+// OR
+/*
+v or v = v
+v or f = v
+f or v = v
+f or f = f
+*/
+
+console.log('*****operador OR*****');
+console.log(true || true);//true
+console.log(true || false);//true
+console.log(false || true);//true
+console.log(false|| false);//false
+
+if(4 ==4 || 2 > 5 ){
+    console.log('verdadero');
+}
+
+//resultado = valor_uno || valor_dos||valor_tres;
+//1. evalua los operandos de izq a der
+//2. por cada operando, convierte el valor a booleano, si el resulado es true
+//se detiene y retorna el valor original de ese operando.
+//3. si todos los operandos ahn sido evaluados, (todos eran falsos)retorna el ultimo operadno
+
+let  comparacion_booleana = true || false || true;
+comparacion_booleana = '0' || '0';
+comparacion_booleana = undefined || null || NaN || '';
+comparacion_booleana = undefined || null || 3 || '';
+comparacion_booleana = undefined || 'hola' || 3 || '';
+
+console.log('*****operador AND*****');
+console.log(true && true);//true
+console.log(true && false);//true
+console.log(false && true);//true
+console.log(false && false);//false
+
+if(4 ==4 && 2 < 5 ){
+    console.log('verdadero');
+}
+
+//1. evalua los operandos de izq a der
+//2. por cada operando, convierte el valor a booleano, si el resulado es true
+//se detiene y retorna el valor original de ese operando.
+//3. si todos los operandos ahn sido evaluados, (todos eran verdadero)retorna el ultimo operadno
+
+let  comparacion_booleana_dos = true && false && true;
+comparacion_booleana_dos = '0' && '0';
+comparacion_booleana_dos = undefined && null && NaN && '';
+comparacion_booleana_dos = undefined && null && 3 && '';
+comparacion_booleana_dos = undefined && 'hola' && 3 && '';
+
+// prevalencia u orden entre OR y AND
+
+// a %% b || c && d
+
+//negacion 
+console.log(!true);
+console.log(!false);
+console.log(!!undefined);
+
+// nullish o fusion de nulos
+//resultafo = valor_uno ?? valor_dos ?? valor_tres;
+//1. evalua los operadores de izq a dar
+//2. por cada operando revisa si es null o undefined y regresa el primero 
+//que no ea nulo ni undifined
+//si todo los operandos han sido evaluados son nulos oundefined regrea el ultimmo.
+
+a= null ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos';
+a= undefined?? undefined ?? null ?? null ?? null ?? null ;
 
 
 
