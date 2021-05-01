@@ -59,12 +59,99 @@ mensaje = "hola mundo";
 //constante
 const PI = 3.1416;
 const COLOR_ROJO = "#fffff";
-pi_dos = pi;
+pi_dos = PI;
 pi_dos = 7;
-console.log(pi);
+console.log(PI);
 console.log(pi_dos);
 
-const id_account = get_id_account(45);
+//const id_account = get_id_account(45);
+
+//tipos de datos
+// Dinamicamente tipado
+let mensaje_dos ="hola";
+mensaje_dos=12234
+
+// Numero
+let n = 123;
+n = 12.456;
+
+//Valores numericos epeciales Infinity, -Infinity y NaN
+
+// Infinity: respresenta el infiinito matematico, es un valor especial que es mayor que cualquier numero;
+
+console.log(1 / 0);
+console.log(Infinity)
+
+// NaN representa un error de calculo, es el resultado de una operacion
+//matematica incorrecta o indefinida
+
+console.log("no es un numero" / 2);
+
+//NaN es pegajooso, cualquier operacion sobre NaN devuelve NaN
+
+console.log("no es un numero" / 2 + 5);
+
+//tipo de datos BigInt
+
+//Valores enteros mayore, que (2^53-1)  o menor que -(2^53-1) 9.007.199.254.740.991
+
+
+let numero_grande = 12243243543534534345n;
+console.log("numero_grande");
+
+//tipo string
+let texto = "hola";
+let texto_dos = 'hola';
+let texto_tres = ``; //backticks funcionalidad extendida
+let nomb = "Jesus";
+console.log("hola",nomb);
+console.log('hola',nomb);
+console.log(`hola`,nomb);
+console.log("hola ${nomb}");
+console.log('hola ${nomb}');
+console.log(`hola ${nomb}`);
+
+// tipo booleano
+ // true y false
+
+let verdadero = true;
+let falso = false;
+
+let mayor =  4 > 1; //true
+
+//tipo de dato null
+//valo especial que no pertenece a ningun tipo de dato anterior.
+//forma un tipo propio separado que contiene solo el valor null.
+
+let edad = null;
+console.log(edad);
+
+// en JS null NO significa un objeto no existe
+// es un solo valor especial que representa nada, vacio o calor desconocido
+
+//valor undefined
+// valor especial que no pertenece a ningun tipo de dato anterior
+// el significado de undefinet significa valor no asignado
+
+let edad_dos;
+console.log(edad_dos);
+
+// El operador typeof
+console.log(typeof undefined);//undefined
+console.log(typeof 0);//number
+console.log(typeof true);//boolean
+console.log(typeof 10n);//bigint
+console.log(typeof "hola");//string
+
+console.log(typeof(alert));//function
+console.log(typeof(null));// object -ERROR DE JS
+console.log(typeof(Math)); //object
+
+
+
+
+
+
 
 
 
