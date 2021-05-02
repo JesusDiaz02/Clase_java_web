@@ -501,6 +501,89 @@ console.log(!!undefined);
 a= null ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos';
 a= undefined?? undefined ?? null ?? null ?? null ?? null ;
 
+//bucles while y for
+/* while (condicion){
+
+}*/
+
+let i = 0;
+while(i<10){
+    console.log(`el valor de i es: ${i}`);
+    i++;
+}
+
+let t = 0;
+while(i<10){
+    console.log(`el valor de i es: ${i}`);
+    i--;
+}
+
+//do-while
+/* do {
+
+}while(condicion);
+*/
+
+console.log('**********');
+i = 1;
+do{
+    console.log(`el valor de i es: ${i}`);
+    i++;
+}while(i<=10);
+
+//for
+console.log('**********');
+for(i=0; i <= 10; i++){
+    console.log(`el valor de i es: ${i}`);
+}
+for(i=0; i >= 10; i--){
+    console.log(`el valor de i es: ${i}`);
+}
+
+//alcance varianble
+
+console.log('***********');
+for(let z=0; z<=10; z++){
+    console.log(`el valor de z es: ${z}`);
+}
+console.log('***********');
+let w =0;
+for(w=0; w<=0; w++){
+    console.log(`el valor de w es: ${w}`);
+}
+console.log.apply(`el valor de w por fuera  es: ${w}`)
+
+//salto de partes
+console.log('***salto***');
+w=0;
+for(; w<=10;){
+    console.log(`el valor de w es: ${w++}`)
+}
+
+//break y continue
+console.log('*********break****');
+w=0;
+while(1){
+    console.log(`el valor de w es: ${w++}`)
+    if(w == 11) break;
+}
+console.log('********continue****');
+for(i=0; i<=10; i++){
+    if(i%2 !=0)continue;
+    console.log(`${i} es un numereo par.`)
+}
+
+//etiquetas para break y continue
+
+console.log('*****etiquetas****');
+principal: for(i=0; i<=10; i++){
+    for(j=0; j<=10; j++){
+        console.log(`la sume de i+j es: ${i+j}`);
+        if (j ==2) break principal;
+    }
+}
+console.log('salio');
+
 
 
 
